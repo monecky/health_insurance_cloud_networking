@@ -1,3 +1,5 @@
+import socket
+
 import pandas as pd
 from ripe.atlas.cousteau import Traceroute, AtlasCreateRequest, AtlasSource, ProbeRequest, AtlasLatestRequest
 from sqlalchemy import Result
@@ -20,11 +22,15 @@ count = 0
 for company in companies:
     for link in companies[company]:
         target = link[0]
+        try:
+            socket.gethostbyname(target)  # Check if the target is resolvable
+        except socket.gaierror:
+            print(f"Unresolvable target: {target}")
         traceroutes.append(
             Traceroute(
                 af = 4,
                 target = target,
-                description = f"Traceroute to {target} (IPv4)" + link[2],
+                description="4"+target + ";" + link[2] + ";" + company,
                 protocol = "UDP",
                 resolve_on_probe = True,
                 skip_dns_check = False,
@@ -36,7 +42,7 @@ for company in companies:
                 Traceroute(
                      af = 6,
                      target = target,
-                     description=f"Traceroute to {target} (IPv6)" + link[2],
+                     description="4"+target+";"+link[2]+";"+company,
                      protocol="UDP",
                      resolve_on_probe=True,
                      skip_dns_check=False,
@@ -49,14 +55,12 @@ filters = {"tags": "system-anchor,system-ipv4-stable-90d,system-ipv6-stable-90d"
 probes = ProbeRequest(**filters)
 list_probes = []
 for probe in probes:
-    # print(probe["id"])
-    # print(probe)
-    list_probes += [probe["id"]]
-    # exit(0)
-#    Print total count of found probes
+    list_probes += [str(probe["id"])]
+list_probes =  ",".join(list_probes)
 print(probes.total_count)
+print(list_probes)
 # If system-anchor is selected we remain with probes that handle IPv4 and IPv6
-# when doing this for the netherlandse, 44 remain.
+# when doing this for the Netherlands, 44 remain.
 source = AtlasSource(
     type="probes",
     value=list_probes,
@@ -65,33 +69,24 @@ source = AtlasSource(
 )
 
 # RIPE Atlas API Key (replace with your actual key)
-RIPE_API_KEY = "696c7a0b-ae0f-409c-a199-b6327b49d4df"
+# RIPE_API_KEY =
 RIPE_API_KEY = "your_api_key_here"
 
-# Submit measurements
-# atlas_request = AtlasCreateRequest(
-#     key=RIPE_API_KEY,
-#     msm_id=202503012001
-#     measurements=traceroutes,
-#     sources=[source],
-#     is_oneoff=True,
-#     start_time=None,  # Start immediately
-#     stop_time=None,   # Run indefinitely until finished
-# )
-# (is_success, response) = atlas_request.create()
-#
-# if is_success:
-#     print(response)
-# else:
-#     print("Error making request")
-kwargs = {
-    "probe_ids": list_probes
-}
-
-is_success, results = AtlasLatestRequest(**kwargs).create()
+# # Submit measurements
+atlas_request = AtlasCreateRequest(
+    key=RIPE_API_KEY,
+    msm_id=202503012001,
+    measurements=traceroutes,
+    sources=[source],
+    is_oneoff=True,
+    start_time=None,  # Start immediately
+    stop_time=None,   # Run indefinitely until finished
+)
+(is_success, response) = atlas_request.create()
 
 if is_success:
-    for result in results:
-        print(Result.get(result))
+    print(response)
 else:
-    print("Error loading request.")
+    print("Error making request")
+    print(response)
+
