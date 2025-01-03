@@ -49,6 +49,7 @@ for company in companies:
                 )
             )
             count += 1
+print(count)
 print(300000 /(count*60))
 
 filters = {"tags": "system-anchor,system-ipv4-stable-90d,system-ipv6-stable-90d", "country_code": "NL",  "is_public":"True"}
@@ -58,7 +59,7 @@ for probe in probes:
     list_probes += [str(probe["id"])]
 list_probes =  ",".join(list_probes)
 print(probes.total_count)
-print(list_probes)
+# print(list_probes)
 # If system-anchor is selected we remain with probes that handle IPv4 and IPv6
 # when doing this for the Netherlands, 44 remain.
 source = AtlasSource(
@@ -69,8 +70,7 @@ source = AtlasSource(
 )
 
 # RIPE Atlas API Key (replace with your actual key)
-# RIPE_API_KEY =
-RIPE_API_KEY = "your_api_key_here"
+RIPE_API_KEY = "696c7a0b-ae0f-409c-a199-b6327b49d4df"
 
 # # Submit measurements
 atlas_request = AtlasCreateRequest(
