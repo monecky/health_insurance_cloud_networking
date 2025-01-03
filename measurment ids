@@ -1,0 +1,140 @@
+"C:\Program Files\Python311\python.exe" C:\Users\marij\PycharmProjects\health_insurance_cloud_networking\measurement.py
+Index(['Company', 'Mother company', 'CAO', 'Support login', 'Support iDIN',
+       'Support Login digid', 'Support Login eidas', 'Home page',
+       'Home Domain', 'Home IPv4', 'Home IPv6', 'Home Location IP', 'Home ISP',
+       'Home cloud', 'Home RIS Visibility', 'Home RIR Stats Country',
+       'Home IPv6.1', 'Home Domain signature (DNSSEC)',
+       'Home secure connection (HTTPS)', 'Home security options',
+       'Home route authorisation (RPKI)', 'Home score', 'Home hall of fame',
+       'Home in Netherlands', 'Home in Europa', 'Home cookies',
+       'Home optional cookies', 'Home info cookies',
+       'Registration traditioneel', 'Registration vs Home',
+       'Registration page', 'Registration domain', 'Registration IPv4',
+       'Registration IPv6', 'Registration Location', 'Registration ISP',
+       'Registration cloud', 'Registration RIS Visibility',
+       'Registration RIR Stats Country', 'Registration IPv6.1',
+       'Registration Domain signature (DNSSEC)',
+       'Registration secure connection (HTTPS)',
+       'Registration security options',
+       'Registration route authorisation (RPKI)', 'Registration score',
+       'Registration hall of fame', 'Registration Netherlands',
+       'Registration europa', 'Registration cookies',
+       'Registration optional cookies', 'Registration info cookies',
+       'Login vs Home', 'Login domain', 'Login IPv4', 'LoginIPv6',
+       'Login location IP', 'Login ISP', 'Login cloud', 'Login RIS Visibility',
+       'Login RIR Stats Country', 'Login IPv6',
+       'Login Domain signature (DNSSEC)', 'Login secure connection (HTTPS)',
+       'Login security options', 'Login route authorisation (RPKI)',
+       'Login score', 'Login hall of fame', 'Login Netherlands',
+       'Login Europa', 'Login cookies', 'Login optional cookies',
+       'Login info cookies'],
+      dtype='object')
+104
+48.07692307692308
+34
+{'measurements': [85848140]}
+{'measurements': [85848141]}
+{'measurements': [85848142]}
+{'measurements': [85848143]}
+{'measurements': [85848144]}
+{'measurements': [85848145]}
+{'measurements': [85848146]}
+{'measurements': [85848147]}
+{'measurements': [85848148]}
+{'measurements': [85848149]}
+{'measurements': [85848150]}
+{'measurements': [85848151]}
+{'measurements': [85848152]}
+{'measurements': [85848153]}
+{'measurements': [85848154]}
+{'measurements': [85848155]}
+{'measurements': [85848157]}
+{'measurements': [85848158]}
+{'measurements': [85848160]}
+{'measurements': [85848161]}
+{'measurements': [85848162]}
+{'measurements': [85848163]}
+{'measurements': [85848164]}
+{'measurements': [85848165]}
+{'measurements': [85848166]}
+{'measurements': [85848167]}
+{'measurements': [85848168]}
+{'measurements': [85848169]}
+{'measurements': [85848170]}
+{'measurements': [85848171]}
+{'measurements': [85848172]}
+{'measurements': [85848173]}
+{'measurements': [85848174]}
+{'measurements': [85848175]}
+{'measurements': [85848176]}
+{'measurements': [85848177]}
+{'measurements': [85848178]}
+{'measurements': [85848179]}
+{'measurements': [85848180]}
+{'measurements': [85848181]}
+{'measurements': [85848182]}
+{'measurements': [85848183]}
+{'measurements': [85848184]}
+{'measurements': [85848185]}
+{'measurements': [85848186]}
+{'measurements': [85848187]}
+{'measurements': [85848188]}
+{'measurements': [85848190]}
+{'measurements': [85848191]}
+{'measurements': [85848192]}
+{'measurements': [85848193]}
+{'measurements': [85848194]}
+{'measurements': [85848195]}
+{'measurements': [85848196]}
+{'measurements': [85848197]}
+{'measurements': [85848198]}
+{'measurements': [85848199]}
+{'measurements': [85848200]}
+{'measurements': [85848201]}
+{'measurements': [85848202]}
+{'measurements': [85848203]}
+{'measurements': [85848204]}
+{'measurements': [85848205]}
+{'measurements': [85848206]}
+{'measurements': [85848207]}
+{'measurements': [85848208]}
+{'measurements': [85848209]}
+{'measurements': [85848210]}
+{'measurements': [85848211]}
+{'measurements': [85848212]}
+{'measurements': [85848213]}
+{'measurements': [85848214]}
+{'measurements': [85848215]}
+{'measurements': [85848216]}
+{'measurements': [85848217]}
+{'measurements': [85848218]}
+{'measurements': [85848219]}
+{'measurements': [85848220]}
+{'measurements': [85848222]}
+{'measurements': [85848223]}
+{'measurements': [85848224]}
+{'measurements': [85848225]}
+{'measurements': [85848226]}
+{'measurements': [85848227]}
+{'measurements': [85848228]}
+{'measurements': [85848229]}
+{'measurements': [85848230]}
+{'measurements': [85848231]}
+{'measurements': [85848232]}
+{'measurements': [85848233]}
+{'measurements': [85848234]}
+{'measurements': [85848235]}
+{'measurements': [85848236]}
+{'measurements': [85848237]}
+{'measurements': [85848238]}
+{'measurements': [85848239]}
+{'measurements': [85848240]}
+{'measurements': [85848241]}
+{'measurements': [85848242]}
+{'measurements': [85848243]}
+{'measurements': [85848244]}
+{'measurements': [85848245]}
+{'measurements': [85848246]}
+{'measurements': [85848247]}
+
+Process finished with exit code 0
