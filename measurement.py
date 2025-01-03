@@ -71,22 +71,22 @@ source = AtlasSource(
 
 # RIPE Atlas API Key (replace with your actual key)
 RIPE_API_KEY = "696c7a0b-ae0f-409c-a199-b6327b49d4df"
-
+for trace in range(len(traceroutes)):
 # # Submit measurements
-atlas_request = AtlasCreateRequest(
-    key=RIPE_API_KEY,
-    msm_id=202503012001,
-    measurements=traceroutes,
-    sources=[source],
-    is_oneoff=True,
-    start_time=None,  # Start immediately
-    stop_time=None,   # Run indefinitely until finished
-)
-(is_success, response) = atlas_request.create()
+    atlas_request = AtlasCreateRequest(
+        key=RIPE_API_KEY,
+        msm_id=202503012001000+trace,
+        measurements=[traceroutes[trace]],
+        sources=[source],
+        is_oneoff=True,
+        start_time=None,  # Start immediately
+        stop_time=None,   # Run indefinitely until finished
+    )
+    (is_success, response) = atlas_request.create()
 
-if is_success:
-    print(response)
-else:
-    print("Error making request")
-    print(response)
+    if is_success:
+        print(response)
+    else:
+        print("Error making request")
+        print(response)
 
