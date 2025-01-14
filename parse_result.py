@@ -73,3 +73,5 @@ plt.pie(y, labels = mylabels)
 plt.show()
 # https://stat.ripe.net/docs/02.data-api/rir-stats-country.html
 # How to find the country https://stat.ripe.net/data/rir-stats-country/data.json?resource=2001:67c:2e8::/48
+# GET /data/maxmind-geo-lite/data.json?resource=193/23
+# https://stat.ripe.net/data/maxmind-geo-lite/data.json?resource=193/23
